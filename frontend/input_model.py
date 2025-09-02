@@ -1,7 +1,7 @@
 from pydantic import BaseModel,Field
 
 class Input(BaseModel):
-    DATE: int = Field(...,gt=0,description="Flight Schedule date")
+    DATE: str = Field(...,gt=0,description="Flight Schedule date")
     AIRLINE: str = Field(...,description="Airline Code like AA, AB etc")
     DEPARTURE_TIME: int = Field(...,ge=0,description="Times in minutes of leaving origin state")
     ARRIVAL_TIME: int = Field(...,ge=0,description="Times in minutes of arrival at destination")
